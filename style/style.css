@@ -25,10 +25,10 @@ body {
 }
 
 main {
-  background: url("../images/background.svg");
-  color: var(--gray);
-  width: 375px;
-  height: 812px;
+  background: url("../images/background.svg") no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
 }
 
 .container {
@@ -36,6 +36,8 @@ main {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+
+  color: var(--gray);
 }
 
 .avatar {
@@ -70,6 +72,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 0.7rem;
 }
 
@@ -85,4 +88,17 @@ ul {
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
+}
+
+/* responsivity */
+
+@media (min-width: 500px) {
+  main {
+    background-image: url("../images/desktop-bg.svg");
+    background-color: #121214;
+  }
+
+  .container {
+    margin-top: 15rem;
+  }
 }
